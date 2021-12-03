@@ -1,0 +1,32 @@
+{% include 'base.html' %}
+{% include 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+{% block content %}
+<div class="container" style="max-width:500px;">
+    <div class="px-4 py-4 pt-md-6 pb-md-7 ml-auto text-center">
+    <h2 class="text-center">Student Details</h2>
+    </div>
+    <div class="py-6">
+        <div class="row">
+            <div class="col-12">
+                <form method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit" class="btn-center btn-secondary">Add Student</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
+{% include 'footer.html' %}

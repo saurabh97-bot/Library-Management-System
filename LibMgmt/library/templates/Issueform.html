@@ -1,0 +1,36 @@
+{% include 'base.html' %}
+{% include 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+{% block content %}
+<div class="container" style="max-width:500px;">
+    <div class="px-5 py-5 pt-md-7 pb-md-6 ml-auto text-center">
+    <h2 class="text-center">Book Issue Details</h2>
+    </div>
+    <div class="py-6">
+        <div class="row">
+            <div class="col-12">
+                <form method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit" class="btn-center btn-secondary">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
+{% include 'footer.html' %}

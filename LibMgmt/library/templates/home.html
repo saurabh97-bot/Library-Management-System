@@ -1,0 +1,21 @@
+{% include 'base.html' %}
+{% include 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to library System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="backgorund-color:yellow">
+{% block content %}
+<h1 class="text-center">Welcome to My Library Management System</h1>
+<p class="text-center">Libraries provide people of all ages and backgrounds with unlimited possibilities to participate in a media- and technology-enriched society. As community anchors, libraries touch people’s lives in many ways and stand as protectorates of the tenets of a democratic government. This report discusses current issues, developments, and practices of academic, school, and public libraries.</p>
+{% endblock %}
+</body>
+</html>
+{% include 'footer.html' %}

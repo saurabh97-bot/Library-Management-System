@@ -1,4 +1,4 @@
-# Library-Management-System in Python and MySQL Database
+# Library-Management-System in Python using MySQL Database
 
 ## Functionalities in this project
            - add books

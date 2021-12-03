@@ -78,11 +78,13 @@ class UpdateBooks(UpdateView):
 
 class DeleteStudent(DeleteView):
     model = StudentRecords
+    template_name = 'deletestudent.html'
     success_url = "/student"
 
 
 class DeleteBooks(DeleteView):
     model = BookDataset
+    template_name = 'deletebook.html'
     success_url = "/book"
 
 
